@@ -65,15 +65,14 @@ function onManualTrigger() {
   }
 
   const data = extractData(response)
-  const pdf = makePDF(data)
+  const pdfBlob = makePDF(data)
 
-  const pdfFile = DriveApp.createFile(pdf)
-  pdfFile.setTrashed(true)
-  const pdfUrl = pdfFile.getUrl()
-
-  const htmlOutput = HtmlService.createHtmlOutput(
-    `<a target="_blank" href="${pdfUrl}">View PDF</a>`
-  )
+  const htmlTemplate = HtmlService.createTemplateFromFile("ManualPDFResult")
+  htmlTemplate.data = {
+    filename: ATTACHMENT_FILENAME,
+    bytes: pdfBlob.getBytes()
+  }
+  const htmlOutput = htmlTemplate.evaluate()
   ui.showModalDialog(htmlOutput, "Done")
 }
 

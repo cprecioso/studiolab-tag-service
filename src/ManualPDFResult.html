@@ -1,0 +1,21 @@
+<p>
+  <span id="loading">Loading...</span>
+  <a
+    id="fileDownload"
+    download="<?= data.filename ?>"
+    target="_blank"
+    style="display: none;"
+    >Download PDF</a
+  >
+</p>
+
+<script>
+  var bytes = JSON.parse(<?= JSON.stringify(data.bytes) ?>)
+  var buffer = Uint8Array.from(bytes)
+  var blob = new Blob([buffer], { type: "application/pdf" })
+  var url = URL.createObjectURL(blob)
+  var el = window.document.getElementById("fileDownload")
+  el.href = url
+  window.document.getElementById("loading").style.display = "none"
+  el.style.display = "block"
+</script>
