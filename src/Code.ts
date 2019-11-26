@@ -86,9 +86,9 @@ function onSubmit(event: GoogleAppsScript.Events.FormsOnFormSubmit) {
   MailApp.sendEmail({
     ...MAIL_PARAMETERS,
     to: email,
-    body:
-      MAIL_PARAMETERS.body +
-      `\n\nUse this link to modify your prototype information: ${event.response.getEditResponseUrl()}`,
+    body: `${MAIL_PARAMETERS.body}
+
+Use this link to modify your prototype information: ${event.response.getEditResponseUrl()}`,
     attachments: [pdf]
   })
 }
