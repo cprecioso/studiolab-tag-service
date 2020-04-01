@@ -45,10 +45,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@types/google-apps-script@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-1.0.6.tgz#fa2089b5f7155710fbff10ebe34d94cd584443b6"
-  integrity sha512-rsfM+/Gevq25pakZOn+79lBZlZRSqpSOqAz+BDf16uTzNcqzO37sq0fVKeNOSeiX+4acQRzHYP2P8HQfGSHDnQ==
+"@types/google-apps-script@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-1.0.11.tgz#28f97c3cffda4ea4d477e3057799575b9b466b7e"
+  integrity sha512-LQS3WtXMv/dcU3kdk2DT80fdTZUdL+7Wi4mIZFBYisbx8SBSln7uPDhejpe9BiULvEscZW74pgqrD+rqAaZw5w==
 
 "@types/minimatch@^3.0.3":
   version "3.0.3"

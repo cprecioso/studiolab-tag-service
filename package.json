@@ -3,7 +3,7 @@
     "@google/clasp": "^2.3.0"
   },
   "devDependencies": {
-    "@types/google-apps-script": "^1.0.6",
+    "@types/google-apps-script": "^1.0.11",
     "typescript": "^3.7.2"
   }
 }
